@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fart System</title>
+</head>
+<body>
+    <!-- Audio elements for each fart sound -->
+    <audio id="fart1">
+        <source src="sounds/fart1.ogg" type="audio/ogg">
+    </audio>
+    <audio id="fart2">
+        <source src="sounds/fart2.ogg" type="audio/ogg">
+    </audio>
+    <audio id="fart3">
+        <source src="sounds/fart3.ogg" type="audio/ogg">
+    </audio>
+    <audio id="fart4">
+        <source src="sounds/fart4.ogg" type="audio/ogg">
+    </audio>
+    <audio id="fart5">
+        <source src="sounds/fart5.ogg" type="audio/ogg">
+    </audio>
+    
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.data.type === "playSound") {
+                const audio = document.getElementById(event.data.sound);
+                if (audio) {
+                    audio.volume = 0.3; // Adjust volume (0.0 to 1.0)
+                    audio.currentTime = 0; // Reset to start
+                    audio.play().catch(err => console.log('Audio play error:', err));
+                }
+            }
+        });
+    </script>
+</body>
+</html>
