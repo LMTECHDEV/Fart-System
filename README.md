@@ -1,7 +1,7 @@
 # FiveM Random Fart System
 
 A humorous FiveM script that randomly makes players fart when they're near other players, with multiple randomized fart sounds!
-Preview: https://youtu.be/BNQd82_QZkI
+Preview: https://youtu.be/tKe1ps-V3MA
 ## Features
 - Checks if players are near others at random intervals
 - Random chance system for farting
